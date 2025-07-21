@@ -1,6 +1,13 @@
-# JSX App
+# Example of recommendation app with NubeSDK
 
-This is a template project to develop custom apps for Tiendanube using JSX components
+Example of a recommendation application implementation with NubeSDK.
+
+This demo contains the base structure, without any major customization of the components, focusing only on functionality.
+
+Feel free to copy and modify the code.
+
+![demo](./media/demo.gif)
+
 
 ## Available Scripts
 
