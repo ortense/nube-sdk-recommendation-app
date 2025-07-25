@@ -1,9 +1,4 @@
-import type {
-	NubeComponent,
-	NubeSDK,
-	SecurityURL,
-	UISlot,
-} from "@tiendanube/nube-sdk-types";
+import type { NubeSDK, SecurityURL } from "@tiendanube/nube-sdk-types";
 import { RecommendedProducts } from "./components/RecommendedProducts";
 
 export type Product = {
@@ -30,14 +25,6 @@ const state: RecommendedProductsState = {
 	nube: null,
 	products: [],
 };
-
-function render(slot: UISlot, component: NubeComponent) {
-	state.nube?.send("ui:slot:set", () => ({
-		ui: {
-			slots: { [slot]: component },
-		},
-	}));
-}
 
 export function useProducts() {
 	return [...state.products];
@@ -75,5 +62,5 @@ export function updateRecommendation(
 		...state.products[index],
 		...product,
 	};
-	render("before_main_content", <RecommendedProducts />);
+	state.nube?.render("before_main_content", <RecommendedProducts />);
 }

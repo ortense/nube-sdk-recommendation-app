@@ -6,10 +6,5 @@ import { initializeState } from "./state";
 export async function App(nube: NubeSDK) {
 	const products = await getProducts();
 	initializeState(nube, products);
-
-	nube.send("ui:slot:set", () => ({
-		ui: {
-			slots: { before_main_content: <RecommendedProducts /> },
-		},
-	}));
+	nube.render("after_main_content", <RecommendedProducts />);
 }
