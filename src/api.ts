@@ -59,6 +59,57 @@ export function getProducts(): Promise<Product[]> {
 				},
 			],
 		},
+		{
+			id: "4",
+			name: "Producto 4",
+			price: "400",
+			variants: [
+				{
+					label: "Variante 8",
+					value: 8,
+					image: "https://prd.place/200?id=8",
+				},
+				{
+					label: "Variante 9",
+					value: 9,
+					image: "https://prd.place/200?id=9",
+				},
+			],
+		},
+		{
+			id: "5",
+			name: "Producto 5",
+			price: "500",
+			variants: [
+				{
+					label: "Variante 10",
+					value: 10,
+					image: "https://prd.place/200?id=10",
+				},
+				{
+					label: "Variante 11",
+					value: 11,
+					image: "https://prd.place/200?id=11",
+				},
+			],
+		},
+		{
+			id: "6",
+			name: "Producto 6",
+			price: "600",
+			variants: [
+				{
+					label: "Variante 12",
+					value: 12,
+					image: "https://prd.place/200?id=12",
+				},
+				{
+					label: "Variante 13",
+					value: 13,
+					image: "https://prd.place/200?id=13",
+				},
+			],
+		},
 	];
 	return Promise.resolve(data);
 }
